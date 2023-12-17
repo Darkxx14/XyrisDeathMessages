@@ -4,7 +4,6 @@
 
 ![Plugin Version](https://img.shields.io/badge/version-v1.0.0-blue)
 ![Minecraft Versions](https://img.shields.io/badge/Minecraft-1.16%20to%201.20.4-brightgreen)
-[![Downloads](https://img.shields.io/badge/dynamic/json?color=success&label=downloads&query=%24.downloads.total&url=https%3A%2F%2Fapi.spiget.org%2Fv2%2Fresources%2F<RESOURCE_ID>%2Fdownloads)](https://spigotmc.org/resources/<RESOURCE_ID>)
 
 </div>
 
@@ -21,7 +20,7 @@ Xyris Death Messages is a customizable death messages plugin for Spigot servers.
 
 ## Installation
 
-1. **Download:** Obtain the plugin from the [Release page](https://spigotmc.org/resources/<RESOURCE_ID>).
+1. **Download:** Obtain the plugin from the [Release page](https://github.com/Darkxx14/XyrisDeathMessages/releases/).
 2. **Installation:** Place the `XyrisDeathMessages.jar` file into your server's `plugins` folder.
 3. **Activation:** Restart your server to enable the plugin.
 
