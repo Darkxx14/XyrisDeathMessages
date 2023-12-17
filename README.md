@@ -20,7 +20,7 @@ Xyris Death Messages is a customizable death messages plugin for Spigot servers.
 - **Multi-Version Support:** Compatible with Minecraft versions 1.16 to 1.20.4.
 - **Customizable Messages:** Edit, add, and randomize death messages for a unique player experience.
 - **Visibility Toggle:** Control the visibility of death messages with a simple command.
-- **Configurable:** Customize messages via the `messsges.yml` file.
+- **Configurable:** Customize messages via the `config.yml` and `messsges.yml` file.
 
 ## Installation
 
