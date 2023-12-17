@@ -28,7 +28,7 @@ public class ToggleDeathMessagesCommand implements CommandExecutor {
         this.deathMessagesFile = new File(plugin.getDataFolder(), "death-messages-data.yml");
         this.deathMessagesConfig = YamlConfiguration.loadConfiguration(deathMessagesFile);
 
-        plugin.getCommand("toggldeathmessages").setExecutor(this); // Register the command executor
+        plugin.getCommand("toggldeathmessages").setExecutor(this);
     }
 
     @Override
