@@ -1,0 +1,6 @@
+death_messages:
+  custom:
+    - '&c%victim% was slain by %attacker% with %attacker_health% health remaining!'
+    - '&6%attacker% mercilessly eliminated %victim% while having %attacker_health% health!'
+    - '&e%victim% got toasted by %attacker%!'
+    - '&b%attacker% sent %victim% to the nether!'

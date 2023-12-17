@@ -1,0 +1,10 @@
+name: XyrisDeathMessages
+version: 'v1.1'
+main: xyris.darkxx.xyrisdm.Main
+api-version: '1.19'
+author: Darkxx
+website: darkxx.xyz
+commands:
+  xyrisdm:
+    permission: xyrisdm.reload
+  toggldeathmessages:
