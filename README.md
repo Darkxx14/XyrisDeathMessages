@@ -2,7 +2,7 @@
 
 # Xyris Death Messages Plugin
 
-![Plugin Version](https://img.shields.io/badge/version-v1.0.0-blue)
+![Plugin Version](https://img.shields.io/badge/version-v2.0.0-blue)
 ![Minecraft Versions](https://img.shields.io/badge/Minecraft-1.16%20to%201.20.4-brightgreen)
   <a href="link_to_license">
     <img src="https://img.shields.io/github/license/Darkxx14/XyrisDeathMessages?color=blue&label=License&style=flat-square" alt="License">
