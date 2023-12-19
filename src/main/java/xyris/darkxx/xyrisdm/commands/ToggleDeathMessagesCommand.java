@@ -28,7 +28,7 @@ public class ToggleDeathMessagesCommand implements CommandExecutor {
         this.deathMessagesFile = new File(plugin.getDataFolder(), "death-messages-data.yml");
         this.deathMessagesConfig = YamlConfiguration.loadConfiguration(deathMessagesFile);
 
-        plugin.getCommand("toggldeathmessages").setExecutor(this);
+        plugin.getCommand("toggldeathmessages").setExecutor(this); // Register the command executor
     }
 
     @Override
@@ -38,6 +38,7 @@ public class ToggleDeathMessagesCommand implements CommandExecutor {
                 Player player = (Player) sender;
                 UUID playerId = player.getUniqueId();
                 boolean currentStatus = isDeathMessagesEnabled(playerId);
+
                 deathMessagesConfig.set(playerId.toString(), !currentStatus);
 
                 try {
@@ -46,13 +47,13 @@ public class ToggleDeathMessagesCommand implements CommandExecutor {
                     e.printStackTrace();
                 }
 
+                String message;
                 if (!currentStatus) {
-                    String enabledMessage = messagesManager.getDeathMessagesEnabledMessage();
-                    player.sendMessage(enabledMessage);
+                    message = messagesManager.getDeathMessagesEnabledMessage();
                 } else {
-                    String disabledMessage = messagesManager.getDeathMessagesDisabledMessage();
-                    player.sendMessage(disabledMessage);
+                    message = messagesManager.getDeathMessagesDisabledMessage();
                 }
+                player.sendMessage(message);
             } else {
                 sender.sendMessage(ChatColor.RED + "Only players can execute this command.");
             }
@@ -60,6 +61,7 @@ public class ToggleDeathMessagesCommand implements CommandExecutor {
         }
         return false;
     }
+
 
     public boolean isDeathMessagesEnabled(UUID playerId) {
         return deathMessagesConfig.getBoolean(playerId.toString(), true);
