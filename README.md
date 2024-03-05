@@ -115,10 +115,12 @@ death_messages:
 # Done configuring the plugin? Execute the command '/xyrisdm reload' in-game to apply the changes.
 ```
 
+
 The `actions.xk` file allows you to add custom on death events like
-`execute console command`
-`make attacker excute command`
-`make victim excute command`
+
+- `execute console command`
+- `make attacker excute command`
+- `make victim excute command`
 
 ```
 # Placeholders
