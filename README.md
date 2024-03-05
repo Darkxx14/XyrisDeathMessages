@@ -24,6 +24,7 @@ Xyris Death Messages is a customizable death messages plugin for Spigot servers.
 - **Customize Kill and Death Action Bars:** Tailor kill and death action bars via the `config.yml`.
 - **Hex Support:** Utilize hexadecimal support.
 - **Configurable:** Customize messages via the `config.yml` and `messsges.yml` file.
+- **Custom Actions:** Define custom actions on death with XyrisDeathMessages.
 
 ## Installation
 
@@ -58,6 +59,7 @@ The `config.yml` file allows you to customize death messages. Edit, add, or remo
 
 # Welcome to the configuration file for Xyris Death Messages. It's very easy to edit all the settings. If you encounter any issues while configuring or discover any bugs, please feel free to contact us at xyris.fun/devs.
 
+heal_on_kill: false # heal the attacker on kill
 
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 # Titles
@@ -69,13 +71,13 @@ The `config.yml` file allows you to customize death messages. Edit, add, or remo
 
 kill-titles:
   enabled: true
-  kill-title: '&#00FF07&lʏᴏᴜ ᴡᴏɴ!'
-  kill-subtitle: '&7You defeated %victim%!'
+  kill-title: '&aYou Won!'
+  kill-subtitle: '&fYou defeated %victim%'
 
 death-titles:
   enabled: true
-  death-title: '&#FF0000&lʏᴏᴜ ʟᴏsᴛ!'
-  death-subtitle: '&7You have been slain by %attacker%!'
+  death-title: '&cYou Lost!'
+  death-subtitle: '&7You have been slain by %attacker%'
 
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 # Action Bars
@@ -89,11 +91,11 @@ death-titles:
 
 kill-action-bar:
   enabled: true
-  message: '&7You defeated &#00FF07%victim% &7with &#00FF07❤ %attacker_health%&7!'
+  message: '&7You defeated &a%victim% &7with &a❤ %attacker_health%&7.'
 
 death-action-bar:
   enabled: true
-  message: '&7You were defeated by &#FF0000%attacker% &7with &#FF0000❤ %attacker_health%&7!'
+  message: '&7You were defeated by &c%attacker% &7with &c❤ %attacker_health%&7.'
 
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 # Death Messages
@@ -106,11 +108,33 @@ death-action-bar:
 
 death_messages:
   custom:
-    - '&#FF0000%victim%&7 has been killed by &#FF0000%attacker% &8(&7❤ %attacker_health%&8)'
-    - '&#00FFFF%victim%&7 has been killed by &#00FFFF%attacker% &8(&7❤ %attacker_health%&8)'
+    - '&f%victim% &7died to &f%attacker% &8(&7%attacker_health%&8)'
+    - '&c%attacker% &7rolled &c%victim% &7they had &c%attacker_health% &7health.'
 
 # You can add more death messages here!
 # Done configuring the plugin? Execute the command '/xyrisdm reload' in-game to apply the changes.
+```
+
+The `actions.xk` file allows you to add custom on death events like
+`execute console command`
+`make attacker excute command`
+`make victim excute command`
+
+```
+# Placeholders
+# {attacker} - Returns the attacker name
+# {victim} - Returns the vicitm name
+
+# All the actions listed here are on death actions.
+
+on-death {
+
+    console_command "give {attacker} minecraft:gold 5"
+    console_command "say {victim} You're so bad bro"
+    attacker_command "msg {victim} ez"
+    victim_command "spawn"
+
+}
 ```
 
 The `messages.yml` file allows you to customize the /toggledeathmessage command messages to suit your server's theme or style.
