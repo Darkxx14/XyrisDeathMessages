@@ -1,0 +1,14 @@
+# Placeholders
+# {attacker} - Returns the attacker name
+# {victim} - Returns the vicitm name
+
+# All the actions listed here are on death actions.
+
+on-death {
+
+    console_command "give {attacker} minecraft:gold 5"
+    console_command "say {victim} You're so bad bro"
+    attacker_command "msg {victim} ez"
+    victim_command "spawn"
+
+}

@@ -1,0 +1,69 @@
+#  (_____)                                         (_____)
+#  |   |~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|   |
+#  |   | ##     ## ##    ## ########  ####  ######  |   |
+#  |   |  ##   ##   ##  ##  ##     ##  ##  ##    ## |   |
+#  |   |   ## ##     ####   ##     ##  ##  ##       |   |
+#  |   |    ###       ##    ########   ##   ######  |   |
+#  |   |   ## ##      ##    ##   ##    ##        ## |   |
+#  |   |  ##   ##     ##    ##    ##   ##  ##    ## |   |
+#  |   | ##     ##    ##    ##     ## ####  ######  |   |
+#  |   |    Xyris Death Messages - XyrisPlugins     |   |
+#  |___|~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|___|
+#  (_____)         https://xyris.fun/devs          (_____)
+
+# Welcome to the configuration file for Xyris Death Messages. It's very easy to edit all the settings. If you encounter any issues while configuring or discover any bugs, please feel free to contact us at xyris.fun/devs.
+
+heal_on_kill: false # heal the attacker on kill
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# Titles
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# Placeholders:
+# %attacker% - Returns the attacker name.
+# %victim% - Returns the victim name.
+
+kill-titles:
+  enabled: true
+  kill-title: '&aYou Won!'
+  kill-subtitle: '&fYou defeated %victim%'
+
+death-titles:
+  enabled: true
+  death-title: '&cYou Lost!'
+  death-subtitle: '&7You have been slain by %attacker%'
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# Action Bars
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# Placeholders:
+# %attacker% - Returns the attacker name.
+# %victim% - Returns the victim name.
+# %attacker_health% - Returns the attacker health.
+# %victim_health% - Returns the victim health.
+
+kill-action-bar:
+  enabled: true
+  message: '&7You defeated &a%victim% &7with &a❤ %attacker_health%&7.'
+
+death-action-bar:
+  enabled: true
+  message: '&7You were defeated by &c%attacker% &7with &c❤ %attacker_health%&7.'
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# Death Messages
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# Placeholders:
+# %attacker% - Returns the attacker name.
+# %victim% - Returns the victim name.
+# %attacker_health% - Returns the attacker health.
+
+death_messages:
+  custom:
+    - '&f%victim% &7died to &f%attacker% &8(&7%attacker_health%&8)'
+    - '&c%attacker% &7rolled &c%victim% &7they had &c%attacker_health% &7health.'
+
+# You can add more death messages here!
+# Done configuring the plugin? Execute the command '/xyrisdm reload' in-game to apply the changes.
