@@ -1,5 +1,5 @@
 name: XyrisDM
-version: '2.0'
+version: '2.2'
 main: xyris.darkxx.xyrisdm.Main
 api-version: '1.19'
 author: Darkxx
